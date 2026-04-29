@@ -5,48 +5,70 @@
 }
 body{
     font-family: sans-serif;
-    background-color: #c4ad9d;
+    height: 100vh;
+    background-color: #023246;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 20px;
 }
 
 #contenair form{
-    border: 1px solid black;
+    box-shadow: 0 0 5px #23ced9;
     padding: 10px;
     display: flex;
     flex-direction: column;
+    background-color: #233246;
+    border-radius: 20px;
 }
 #contenair form .champ_text{
-    background-color: black;
-    color: white;
+    background-color: #287094;
+    color: #f6f6f6;
     
     width: 500px;
     padding-left: 25px;
     margin-bottom: 10px;
-    font-size: 22px;
+    font-size: 18px;
     height: 40px;
     border-radius: 20px;
     outline: none;
-    border: 1.5px solid black;
+    border: none;
     
 }
 
 #contenair form label{
     padding: 0 0 3px 30px;
+    color: #287094;
+    font-size: 17px;
+    font-weight: bold;
 
 }
 #contenair form .button_ajouter{
     background-color: black;
+    cursor: pointer;
     color: white;
-    
-    width: 500px;
-    
-    
+    padding: 5px 80px 5px 80px;
     font-size: 22px;
-    height: 40px;
+    
     border-radius: 20px;
     outline: none;
     border: 1.5px solid black;
     
+}
+#contenair form .button{
+    display: flex;
+    justify-content: space-between;
+}
+#contenair form a{
+    
+    
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 5px 80px 5px 80px;
+    font-size: 22px;
+    
+    border-radius: 20px;
+    outline: none;
+    border: 1.5px solid black;
 }

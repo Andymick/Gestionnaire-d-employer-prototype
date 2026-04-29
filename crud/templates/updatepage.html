@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" type="text/css" href="{% static 'css/updatepage.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/addpage.css' %}">
     <title>home</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
             <label class="text">Nom</label>
             <input class="champ_text" type="text" name="nom" value="{{ worker.nom }}"/>
 
-            <label class="text">Numero de tel</label>
+            <label class="text">Numero de telephone</label>
             <input class="champ_text" type="text" name="numero" value="{{ worker.numero }}"/>
 
             <label class="text">Email</label>
@@ -24,7 +24,10 @@
             <label class="text">Poste</label>
             <input class="champ_text" type="text" name="poste" value="{{ worker.poste }}"/>
 
-            <input class="button_ajouter" type="submit" value="valider"/>
+            <div class="button">
+            <input class="button_ajouter" type="submit" value="Modifier"/>
+            <a href="/">Annuler</a>
+            </div>
         </form>
     </div>
 </body>

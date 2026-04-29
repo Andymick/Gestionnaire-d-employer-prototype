@@ -1,0 +1,24 @@
+# Environnement virtuel
+env/
+venv/
+
+# Fichiers Python
+__pycache__/
+*.pyc
+
+# Base de données
+db.sqlite3
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Fichiers VSCode
+.vscode/
+
+# Fichiers de migration (optionnel)
+*/migrations/*.py
+!*/migrations/__init__.py
+
+# Fichier secret
+.env

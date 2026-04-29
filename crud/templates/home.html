@@ -17,14 +17,18 @@
     
     <div id="employer">
         {% for worker in workers %}
-            <div>{{worker.nom}}</div>
-            <div>{{worker.numero}}  {{worker.email}}</div>
-            <div>{{worker.poste}}</div>
-            <form action="/supprimer/{{ worker.id}}" method="POST">
+            <div><span>Nom : </span>{{worker.nom}}</div>
+            <div><span>Numero : </span>{{worker.numero}} <span>Email : </span>{{worker.email}}</div>
+            <div><span>Poste : </span>{{worker.poste}}</div>
+
+            
+            <form class="form2" action="/supprimer/{{ worker.id}}" method="POST">
                 {% csrf_token %}
                 <input type="submit" value="Supprimer"/>
+                <a href="/modifier/{{ worker.id }}">Modifier</a>
             </form>
-            <a href="/modifier/{{ worker.id }}">Modifier</a>
+            
+            
         {% endfor %}
     </div>
 </body>
