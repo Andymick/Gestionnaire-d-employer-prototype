@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
+    <title>home</title>
+</head>
+<body>
+    <div id="contenair">
+        <form action="/ajouter/" method="GET">
+            <button type="submit">Ajouter</button>
+        </form>
+    </div>
+    
+    <div id="employer">
+        {% for worker in workers %}
+            <div>{{worker.nom}}</div>
+            <div>{{worker.numero}}  {{worker.email}}</div>
+            <div>{{worker.poste}}</div>
+            <form action="/supprimer/{{ worker.id}}" method="POST">
+                {% csrf_token %}
+                <input type="submit" value="Supprimer"/>
+            </form>
+            <a href="/modifier/{{ worker.id }}">Modifier</a>
+        {% endfor %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/updatepage.css' %}">
+    <title>home</title>
+</head>
+<body>
+    <div id="contenair">
+        <form action="/valider/{{ worker.id }}" method="POST">
+            {% csrf_token %}
+            <label class="text">Nom</label>
+            <input class="champ_text" type="text" name="nom" value="{{ worker.nom }}"/>
+
+            <label class="text">Numero de tel</label>
+            <input class="champ_text" type="text" name="numero" value="{{ worker.numero }}"/>
+
+            <label class="text">Email</label>
+            <input class="champ_text" type="email" name="email" value="{{ worker.email }}"/>
+
+            <label class="text">Poste</label>
+            <input class="champ_text" type="text" name="poste" value="{{ worker.poste }}"/>
+
+            <input class="button_ajouter" type="submit" value="valider"/>
+        </form>
+    </div>
+</body>
+</html>
