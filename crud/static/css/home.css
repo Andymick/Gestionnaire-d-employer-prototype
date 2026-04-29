@@ -5,12 +5,11 @@
 }
 body{
     font-family: sans-serif;
-    background-color: rgb(46, 46, 46);
+    background-color: #c4ad9d;
     padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
-
 }
 
 #contenair{
